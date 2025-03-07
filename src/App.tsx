@@ -24,6 +24,7 @@ import EditarCategoria from "./components/Categoria/editarcategoria/EditarCatego
 import DeletarProduto from "./components/produtos/deletarproduto/DeletarProduto";
 import FormProduto from "./components/produtos/formproduto/FormProduto";
 import Navbar from "./components/Navbar/Navbar";
+import Equipe from "./pages/equipe/Equipe";
 
 const App = () => {
   useEffect(() => {
@@ -81,6 +82,7 @@ const App = () => {
                   <Route path="/categoria/novo" element={<CadastrarCategoria />} />
                     <Route path="/categoria/:id" element={<EditarCategoria />} />
                     <Route path="/categoria/deletar/:id" element={<DeletarCategoria />} />
+                    <Route path="/equipe" element={<Equipe />} />
                 </Routes>
 
                 {/* Footer é renderizado em todas as páginas */}
