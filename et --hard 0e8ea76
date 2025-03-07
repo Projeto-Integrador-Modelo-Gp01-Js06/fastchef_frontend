@@ -1,0 +1,73 @@
+[33mcf16691[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mDupla-2[m[33m)[m Conflitos Merge
+[33m0e8ea76[m  Merge produtos
+[33ma2e3871[m[33m ([m[1;31morigin/Dupla-3[m[33m, [m[1;31morigin/Autenticação[m[33m)[m :sparkles: Autenticação para finalizar compra
+[33mf72c6d4[m[33m ([m[1;31morigin/Dupla-2-nova[m[33m, [m[1;31morigin/Dupla-2[m[33m, [m[1;32mDupla-2-nova[m[33m)[m  Atualização dupla-2 merge
+[33m9b5c2f6[m  Carrosel equipe
+[33md66db8c[m Adicionando carrinho de compras
+[33mc9bb112[m Ajuste na atualização de perfil do modo dark
+[33m02bb311[m Correção de Atualização de usuário e perfil
+[33mb167180[m Merge remote-tracking branch 'origin/Dupla-4-nova' into Dupla-3
+[33m488ef39[m Atualização da branch
+[33mf06db4e[m Atualização das pastas
+[33m9896183[m Merge Dupla-2-nova
+[33m3792dc9[m :sparkles: Adicionando Categorização do NutriScore
+[33m8e84b1e[m Atualziando cadastro modo Dark
+[33mf9f65cb[m :wrench: Ajuste na Navbar
+[33m468d162[m Navbar
+[33m91c7cca[m Alteração login rota perfil
+[33mb5b9ef0[m Adicionando botoes de editar e excluir nas categorias
+[33m22071af[m :wrench: Ajuste de Conflitos
+[33me01c269[m :sparkles: Configurando Rota na Logo (Navbar)
+[33mf1d6490[m  Organizando pasta perfil
+[33med587a3[m  Organizando pastas cadastro login e perfil
+[33m684f9a6[m Puxando Produtos ao clicar em Categorias
+[33mb2ece33[m Junção de Dupla-2 com Autenticação 06-03--15:40
+[33m4adf650[m Conflitos Merge
+[33m5d22260[m Ajuste Navbar
+[33mc5019cc[m Integração branch Dupla-2 e Autenticação
+[33md0ddd81[m  Ajuste imagem login
+[33me97fe6d[m ajustes isloading centralização
+[33mbaa8b62[m Merge branch 'Dupla-2' into Autenticação Merge para resolução de conflitos e implementação
+[33md272015[m Ajuste da página perfil
+[33m86e2f37[m :sparkles: Página de perfil atualizada
+[33m79bace3[m Merge branch 'Dupla-2' of https://github.com/Projeto-Integrador-Modelo-Gp01-Js06/fastchef into Dupla-3
+[33m346a564[m Ajustes na Service.ts
+[33m95eb930[m Merge branch 'Dupla-4' of https://github.com/Projeto-Integrador-Modelo-Gp01-Js06/fastchef into Dupla-3
+[33mf40d91d[m Atualização de foto do usuário
+[33m95f855b[m :wrench: Ajuste no Consumo + Teste CRUD (get)
+[33m50dcd70[m  Adicionando rota cadastro
+[33mceb09eb[m implementando tela cadastro
+[33m25d25e3[m Estilização tela login
+[33m2516fca[m :wrench:  Ajustes no Consumo
+[33me069753[m  Alterando estilização login
+[33mf2b0b1b[m conexão autenticação
+[33me284b38[m Correção rota login
+[33mc92e896[m Alterando ListarCategorias e CardCategorias
+[33m4478ec5[m Alteracoes no listarCategorias, Corrigido problema de diferenciação de maiúsculas e minúsculas no nome do arquivo Service.ts
+[33m3057115[m Alterações codigo conflito merge
+[33me524c49[m Páginas de Autenticação
+[33me776a03[m Merge branch 'dupla-4' into Dupla-2
+[33m30e6948[m Salvando mudanças antes do merge
+[33m09ffcda[m auntenticação
+[33me03a515[m[33m ([m[1;32mdupla-4[m[33m)[m Inclusão da Classe Produto,  CRUD de produto  completo e atualização da Rota na App.ts
+[33m9da08af[m Autenticação
+[33mb25b0ee[m feat:implementando logica listar categoria
+[33m9b95c5b[m fix: Atualizando service.ts
+[33m6c7efcd[m feat: criar CardCategoria e ListarCategorias, e implementar service.ts com métodos CRUD
+[33me38d4f8[m[33m ([m[1;31morigin/Dupla-1[m[33m)[m  ✨ FroAtualização da imagens do modo dark ✨
+[33m09b9045[m  ✨ Front End ✨
+[33md32b770[m  ✨ Front End ✨
+[33ma12f9dc[m[33m ([m[1;32mAdrielly_Simone[m[33m)[m Initial commit
+[33m33a0bf3[m excluindo alguns arquivos e arrumando o services
+[33m114dcea[m  atualização app.tsx
+[33m5e45bfe[m rotas de sobre e serviços
+[33m0011412[m atualização do footer
+[33ma7cbfab[m pagina login
+[33m086c7b9[m  alterando logo
+[33mdc8074a[m Adicionando segunda opção
+[33m64b8f4c[m ✨ Primeiro commit do projeto ✨
+[33m71691c0[m ✨ Primeiro commit do projeto ✨
+[33mbc9e835[m ✨ Primeiro commit ✨
+[33m1ad681a[m Update README.md
+[33m1d6c8e2[m Update README.md
+[33m048c76f[m initial commit with code
