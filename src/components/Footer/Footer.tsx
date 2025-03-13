@@ -55,8 +55,11 @@ const Footer = () => {
                   
                 <Link to='/' className='hover:underline'>Inicio</Link>
                 <Link to='/sobre' className='hover:underline'>Sobre</Link>
-                <Link to='/servicos' className='hover:underline'>Servicos</Link>
-                <Link to='/login' className='hover:underline'>Login</Link>
+                <Link to='/services' className='hover:underline'>Servicos</Link>
+                <Link to='/login' className='hover:underline'>Login</Link> 
+                <Link to='/cadastro' className='hover:underline'>Cadastrar</Link> 
+                <Link to='/equipe' className='hover:underline'>Equipe</Link> 
+                
                 </ul>
               </div>
             </div>
