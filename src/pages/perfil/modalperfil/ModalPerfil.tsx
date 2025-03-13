@@ -9,7 +9,7 @@ function ModalPerfil() {
         <>
             <Popup
                 trigger={
-                    <Pencil size={32} />
+                    <Pencil size={32} className='hover:text-black'/>
                 }
                 modal
             >
