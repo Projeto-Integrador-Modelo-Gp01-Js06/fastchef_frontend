@@ -14,11 +14,11 @@ function Equipe() {
   ];
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 flex flex-col items-center py-10">
-      <h1 className="text-red-300 dark:text-lime-300 text-4xl lg:text-5xl font-extrabold mb-10">
-        CONHEÇA A NOSSA EQUIPE!
+    <div className="min-h-screen bg-white dark:bg-gray-900 flex flex-col items-center py-10 pt-20">
+      <h1 className="text-red-300 dark:text-lime-300 text-4xl lg:text-5xl font-bold mb-10">
+        Nossa Equipe
       </h1>
-      <p className="text-black dark:text-gray-300 text-xl mb-10 text-center max-w-2xl font-bold">
+      <p className="text-gray-500 text-sm mb-10 text-center max-w-2xl tracking-wide leading-5">
         Somos desenvolvedores apaixonados por tecnologia, inovação e qualidade. Juntos, transformamos desafios em soluções eficientes.
       </p>
 
