@@ -27,7 +27,7 @@ function CardCategoria({ categoria, onClick, onDelete }: CardCategoriasProps) {
   return (
     <div 
       onClick={() => onClick(categoria.id.toString())}  
-      className="relative border rounded-xl p-4 shadow-3xl flex items-center justify-center bg-white hover:shadow-2xl duration-300 cursor-pointer"
+      className="relative border rounded-xl p-4 shadow-3xl flex items-center justify-center dark:text-black bg-white hover:shadow-2xl duration-300 cursor-pointer"
     >
       <p className='text-2xl font-semibold text-gray-800'>{categoria.nome}</p>
       

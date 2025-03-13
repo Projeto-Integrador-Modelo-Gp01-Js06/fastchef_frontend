@@ -33,7 +33,7 @@ function CardCart({ item }: CardProdutosProps) {
   };
 
     return (
-        <div className='flex flex-col rounded-lg overflow-hidden justify-between bg-white'>
+        <div className='flex flex-col rounded-lg overflow-hidden dark:text-black justify-between bg-white'>
             <div className='py-4'>
 
                 <img src={item.foto} className='mt-1 h-40 max-w-75 mx-auto' alt={item.nome} />
@@ -52,12 +52,12 @@ function CardCart({ item }: CardProdutosProps) {
                 </div>
             </div>
             <div className="flex flex-wrap">
-                <button className='w-1/2 text-slate-100 bg-blue-500 hover:bg-blue-700 
+                <button className='w-1/2 text-slate-100 bg-[#8daf66] hover:bg-[#44b063] 
                                    flex items-center justify-center py-2'
                     onClick={() => adicionarItem(item.id)}>
                     <Plus size={32} />
                 </button>
-                <button className='w-1/2 text-slate-100 bg-red-500 hover:bg-red-700 
+                <button className='w-1/2 text-slate-100 bg-red-400 hover:bg-red-500 
                                    flex items-center justify-center py-2'
                     onClick={() => removerItem(item.id)}>
                     <Minus size={32} />

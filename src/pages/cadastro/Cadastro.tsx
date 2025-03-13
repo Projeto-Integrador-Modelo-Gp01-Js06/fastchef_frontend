@@ -134,7 +134,7 @@ function Cadastro() {
           <div className="flex justify-between mt-4">
             <button
               type="submit"
-              className="bg-[#8daf66] hover:bg-lime-400 px-6 py-2 rounded-lg text-black w-1/2 mr-2"
+              className="bg-[#8daf66] hover:bg-[#44b063] px-6 py-2 rounded-lg text-black w-1/2 mr-2 m"
             >
               {isLoading ? (
                 <RotatingLines strokeColor="black" width="24" visible={true} />
@@ -144,7 +144,7 @@ function Cadastro() {
             </button>
             <button
               type="button"
-              className="bg-[#fa7777] hover:bg-[#e66a6a] px-6 py-2 rounded-lg text-black w-1/2 ml-2"
+              className="bg-red-300 hover:bg-red-400 px-6 py-2 rounded-lg text-black w-1/2 ml-2"
             >
               <Link to="/">
                 Voltar tela inicial</Link>
@@ -152,7 +152,7 @@ function Cadastro() {
           </div>
           <p className="text-center mt-4">
             Já tem uma conta? Faça o {" "}
-            <Link to="/login" className="text-[#627947]  hover:underline">
+            <Link to="/login" className="font-bold text-[#44b063]  hover:underline">
               Login
             </Link>
           </p>

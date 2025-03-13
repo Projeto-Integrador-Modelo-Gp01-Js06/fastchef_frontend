@@ -91,7 +91,7 @@ function Login() {
 
         <button
           type="submit"
-          className="my-5 w-full bg-[#fa7777] text-white px-6 py-2 rounded-lg hover:bg-[#e66a6a] transition"
+          className="my-5 w-full bg-red-300 text-white px-6 py-2 rounded-lg hover:bg-[#e66a6a] transition"
         >
           <div className="flex items-center justify-center">
             {isLoading ? (
@@ -112,7 +112,7 @@ function Login() {
 
         <p className="text-center mt-4">
           Ainda não tem uma conta?{" "}
-          <Link to="/cadastro" className="text-[#627947]  hover:underline">
+          <Link to="/cadastro" className="text-[#44b063]  hover:underline">
             Cadastre-se
           </Link>
         </p>

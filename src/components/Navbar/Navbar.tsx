@@ -51,7 +51,7 @@ const Navbar = () => {
                   <li key={menu.id}>
                     <Link
                       to={menu.link}  // Usando Link para navegação
-                      className="inline-block py-4 px-4 hover:text-yellow-500"
+                      className="inline-block py-4 px-4 hover:text-[#44b063]"
                     >
                       {menu.name}
                     </Link>

@@ -136,14 +136,14 @@ function EditarCategoria() {
         </div>
         <div className="flex justify-between">
           <button
-            className="bg-red-400 hover:bg-red-600 text-white font-bold py-2 px-4 rounded"
+            className="bg-red-400 hover:bg-red-500 text-white font-bold py-2 px-4 rounded"
             onClick={retornar}
             type="button"
           >
             Cancelar
           </button>
           <button
-            className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded flex items-center justify-center"
+            className="bg-[#8daf66] hover:bg-[#44b063] text-white font-bold py-2 px-4 rounded flex items-center justify-center"
             type="submit"
           >
             {isLoading ? (

@@ -301,7 +301,7 @@ function FormProduto() {
           type="submit"
           disabled={!categoriaSelecionado || isLoading}
           className="flex justify-center rounded disabled:bg-slate-200 bg-red-400 
-                    hover:bg-red-600 text-white font-bold w-1/2 mx-auto py-2"
+                    hover:bg-red-500 text-white font-bold w-1/2 mx-auto py-2"
         >
           {isLoading ? (
             <RotatingLines
