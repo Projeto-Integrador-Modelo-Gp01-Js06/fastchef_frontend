@@ -80,20 +80,20 @@ function DeletarProduto() {
                 Você tem certeza de que deseja apagar o produto a seguir?</p>
             <div className='border flex flex-col rounded-2xl overflow-hidden justify-between'>
                 <header
-                    className='py-2 px-6 bg-gradient-to-b from-yellow-400 to-yellow-200 text-slate-800 font-bold text-2xl'>
+                    className='py-2 px-6 bg-gradient-to-b from-[#8daf66] to-[#b7d0a2] text-slate-800 font-bold text-2xl'>
                     Produto
                 </header>
                 <p className='p-8 text-2xl bg-white h-full'>{produto.nome}</p>
 
                 <div className="flex">
                     <button
-                        className='text-slate-100 bg-red-400 hover:bg-red-600 w-full py-2'
+                        className='text-slate-100 bg-red-400 hover:bg-red-500 w-full py-2'
                         onClick={retornar}
                     >
                         Não
                     </button>
                     <button
-                        className='w-full text-slate-100 bg-teal-500 hover:bg-teal-700
+                        className='w-full text-slate-100 bg-[#8daf66] hover:bg-[#44b063]
                          flex items-center justify-center'
                         onClick={deletarProduto}
                     >

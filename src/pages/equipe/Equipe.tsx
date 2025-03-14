@@ -40,7 +40,7 @@ function Equipe() {
                 href={membro.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#627947] dark:bg-lime-600 p-2 rounded-full hover:scale-110 hover:bg-lime-300 dark:hover:bg-lime-500 transition-all duration-200"
+                className="bg-[#8daf66] dark:bg-lime-700 p-2 rounded-full hover:scale-110 hover:bg-lime-300 dark:hover:bg-lime-500 transition-all duration-200"
               >
                 <GithubLogo size={26} weight="bold" className="text-black dark:text-white" />
               </a>
@@ -48,7 +48,7 @@ function Equipe() {
                 href={membro.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#627947] dark:bg-lime-600 p-2 rounded-full hover:scale-110 hover:bg-lime-300 dark:hover:bg-lime-500 transition-all duration-200"
+                className="bg-[#8daf66] dark:bg-lime-700 p-2 rounded-full hover:scale-110 hover:bg-lime-300 dark:hover:bg-lime-500 transition-all duration-200"
               >
                 <LinkedinLogo size={26} weight="bold" className="text-black dark:text-white" />
               </a>
