@@ -69,7 +69,7 @@ function CardProdutos({ produto }: CardProdutoProps) {
         </button>        
       </div>
 
-      <div className="flex flex-col justify-center py-2">
+      <div className="flex flex-col justify-center py-2  dark:text-black">
         {produto.categoria ? (
             <p className="text-base italic text-center">
               Categoria: {produto.categoria?.nome}

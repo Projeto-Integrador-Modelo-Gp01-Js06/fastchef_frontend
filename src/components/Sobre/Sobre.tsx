@@ -29,7 +29,7 @@ const Banner = () => {
                 <img
                   src={Feijoada}
                   alt="Feijoada"
-                  className="w-[140%] max-w-[1000px] h-auto mx-auto drop-shadow-[-10px_10px_12px_rgba(0,0,0,1)] ml-[-100px] "
+                  className="w-[140%] max-w-[1000px] h-auto mx-auto drop-shadow-[-10px_10px_12px_rgba(0,0,0,1)] ml-[-100px] sm:ml-[-100px] sm:justify-center"
                 />
               </div>
 

@@ -36,17 +36,17 @@ function Cart() {
 				dark:bg-gray-800
                 "
 			>
-				<h1 className="text-4xl text-center my-4 ">
+				<h1 className="text-4xl text-center my-4 dark:text-black">
 					Carrinho de Compras
 				</h1>
 
-				<h2 className="text-2xl text-center my-4 ">
+				<h2 className="text-2xl text-center my-4 dark:text-black">
 					{items.length === 0 ? 'O Carrinho está vazio!' : ''}
 				</h2>
 
 				<div
 					className="container mx-auto my-4 grid grid-cols-1 
-                            md:grid-cols-2 lg:grid-cols-5 gap-4"
+                            md:grid-cols-2 lg:grid-cols-5 gap-4 dark:text-black"
 				>
 					{items.map((produto) => (
 						<CardCart key={produto.id} item={produto} />
@@ -54,7 +54,7 @@ function Cart() {
 				</div>
 
 				{quantidadeItems > 0 && (
-					<div className="container mx-auto my-8 py-4 w-[60vw] grid grid-cols-2 dark:text-black border rounded-lg bg-white text-lg">
+					<div className="container mx-auto my-8 py-4 w-[60vw] grid grid-cols-2 border rounded-lg bg-white text-lg dark:text-black">
 						<div className="w-full flex flex-col ml-8">
 							<h2 className="text-2xl text-center font-bold py-2">
 								Resumo da Compra
@@ -99,10 +99,10 @@ function Cart() {
 								}).format(valorTotal)}
 							</p>
 						</div>
-						<div className="flex justify-center items-center">
+						<div className="flex justify-center items-center ">
 							<button
 								className="rounded text-slate-100 bg-slate-400 
-          hover:bg-[#44b063] w-1/2 py-2 mx-auto flex justify-center my-4"
+          hover:bg-bg-[#44b063] w-1/2 py-2 mx-auto flex justify-center my-4 dark:text-black"
 								type="submit"
 								disabled={items.length === 0 ? true : false}
 								onClick={finalizarCompra}

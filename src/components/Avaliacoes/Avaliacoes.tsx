@@ -66,8 +66,8 @@ const Testimonial = () => {
                         src={data.img}
                         alt=""
                       />
-                      <p className="text-gray-500 text-sm">{data.text}</p>
-                      <h1 className="text-xl font-bold">{data.name}</h1>
+                      <p className="text-gray-500 text-sm p-2">{data.text}</p>
+                      <h1 className="text-xl font-bold text-black">{data.name}</h1>
                       <p className="text-black/20 text-9xl font-serif absolute top-0 right-0">
                         ,,
                       </p>
