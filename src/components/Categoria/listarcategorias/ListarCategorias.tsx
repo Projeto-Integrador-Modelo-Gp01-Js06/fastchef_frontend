@@ -102,7 +102,7 @@ function ListarCategorias() {
               (usuario.id === 20 || usuario.usuario === 'admin@admin.com') && (
                 <button
                   onClick={() => navigate("/categoria/novo")}
-                  className="text-2xl font-semibold relative border rounded-xl p-4 shadow-3xl flex items-center justify-center bg-[#bad381] hover:shadow-2xl duration-300 cursor-pointer"
+                  className="text-xl font-semibold relative border rounded-xl p-4 shadow-3xl flex items-center justify-center bg-[#8daf66] hover:shadow-xl duration-300 cursor-pointer"
                 >
                   ADICIONAR NOVA CATEGORIA
                 </button>
