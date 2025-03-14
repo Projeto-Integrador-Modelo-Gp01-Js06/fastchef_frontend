@@ -15,7 +15,7 @@ function Equipe() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 flex flex-col items-center py-10">
-      <h1 className="text-red-300 dark:text-lime-300 text-4xl lg:text-5xl font-extrabold mb-10">
+      <h1 className="text-red-300 dark:text-lime-300 text-4xl lg:text-5xl font-extrabold mb-10 ">
         CONHEÇA A NOSSA EQUIPE!
       </h1>
       <p className="text-black dark:text-gray-300 text-xl mb-10 text-center max-w-2xl font-bold">

@@ -48,7 +48,7 @@ const Categories = () => {
       <h2 className="text-4xl font-bold mb-8 text-center text-black dark:text-white">
         Mais de 1.000 pratos para pedir!
       </h2>
-      <p className="bg-verde text-black px-6 py-2 rounded-md text-base mb-8">
+      <p className="bg-verde text-black px-6 py-2 rounded-md text-xl mb-8 ">
         Bem-vindo à maior rede de pedidos e entregas de comida do Brasil
       </p>
 
@@ -66,7 +66,7 @@ const Categories = () => {
                   alt={category.name}
                   className="w-24 h-24 object-cover"
                 />
-                <p className="mt-2 text-base font-semibold">{category.name}</p>
+                <p className="mt-3 text-xl font-semibold ">{category.name}</p>
               </div>
             ))}
           </div>
