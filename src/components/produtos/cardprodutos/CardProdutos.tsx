@@ -41,7 +41,7 @@ function CardProdutos({ produto }: CardProdutoProps) {
     <div className="flex flex-col rounded-lg overflow-hidden justify-between bg-white my-10 hover:shadow-lg hover:scale-105 transition-transform duration-300">
       <div className="flex justify-end items-end pt-2 pr-2">
         {/* Mostrar ícones de cadastro, edição e exclusão apenas se for o Usuario Admin mencionado abaixo */}
-        {isAuthenticated && (usuario.id === 2 || usuario.usuario === 'root@root.com') && (
+        {isAuthenticated && (usuario.id === 20 || usuario.usuario === 'admin@admin.com') && (
           <>
             <Link to={`/produto/produto`}>
               <Plus size={24} className="mr-1 hover:fill-green-700" />
@@ -70,6 +70,13 @@ function CardProdutos({ produto }: CardProdutoProps) {
       </div>
 
       <div className="flex flex-col justify-center py-2">
+        {produto.categoria ? (
+            <p className="text-base italic text-center">
+              Categoria: {produto.categoria?.nome}
+            </p>
+          ) : (
+            ""
+          )}
         <img
           src={produto.foto}
           className="mt-1 h-44 w-auto m-2 object-cover rounded-lg"
@@ -99,14 +106,6 @@ function CardProdutos({ produto }: CardProdutoProps) {
           >
             {["A", "B"].includes(produto.nutriScore) ? "NutriScore: SAUDÁVEL" : ""}
           </p>
-          
-          {produto.categoria ? (
-            <p className="text-base italic text-center">
-              Categoria: {produto.categoria?.nome}
-            </p>
-          ) : (
-            ""
-          )}
         </div>
       </div>
 

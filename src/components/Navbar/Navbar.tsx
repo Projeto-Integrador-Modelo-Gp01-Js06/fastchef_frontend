@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
 import { FaCartShopping } from "react-icons/fa6";
 import DarkMode from "./DarkMode";
-import { Link } from "react-router-dom";  
+import { Link, useNavigate } from "react-router-dom";  
 import { CartContext } from "../../contexts/CartContext";
+import AuthContext from "../../contexts/AuthContext";
+import { ToastAlerta } from "../../utils/ToastAlerta";
 
 const Menu = [
   {
@@ -31,6 +33,19 @@ const Menu = [
 
 const Navbar = () => {
   const { quantidadeItems } = useContext(CartContext)
+  
+  const navigate = useNavigate();
+  const { usuario, handleLogout } = useContext(AuthContext);
+  const isAuthenticated = usuario.token !== ""; // Verifica se há token (usuário logado)
+
+
+  function logout() {
+
+    handleLogout()
+    ToastAlerta('O Usuário foi desconectado com sucesso!', 'info')
+    navigate('/')
+}
+
 
   return (
     <>
@@ -72,6 +87,10 @@ const Navbar = () => {
               <Link to="/login">
               <img src= "https://ik.imagekit.io/c2hajdacu/FastChef/user%20(1).png?updatedAt=1741357664304" className="w-10 h-10 rounded-full mb-4 p-1 m-5 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110 bg-red-300"></img>
               </Link>
+              {isAuthenticated && (
+                <Link to='' onClick={logout} className='mr-1 -m-5 hover:underline'>
+                  Sair
+                </Link>)}
               <div>
                 <DarkMode />
               </div>
