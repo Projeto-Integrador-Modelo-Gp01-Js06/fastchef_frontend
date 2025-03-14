@@ -35,7 +35,7 @@ const Banner = () => {
 
               {/* Seção de Texto */}
               <div className="flex flex-col justify-center gap-6 sm:pt-0">
-                <h1 className="text-3xl sm:text-4xl font-bold text-verde">Sobre.</h1>
+                <h1 className="text-4xl lg:text-5xl font-bold mb-10 text-verde">Sobre</h1>
                 <p className="text-sm text-gray-500 tracking-wide leading-5">
                 FastChef combina sabor e segurança, oferecendo ingredientes frescos e um serviço de delivery ágil e seguro. Conte com a qualidade de nossos pratos e a confiança de um serviço rápido, que traz suas refeições diretamente para você!
                   <br />
@@ -44,7 +44,7 @@ const Banner = () => {
                 </p>
                 <div className="flex gap-6">
                   <div>
-                    <GrSecure className="text-4xl h-20 w-20 shadow-sm p-5 rounded-full bg-violet-100 dark:bg-violet-400" />
+                    <GrSecure className="text-4xl h-20 w-20 shadow-sm p-5 rounded-full bg-violet-100 dark:bg-violet-400 " />
                   </div>
                   <div>
                     <IoFastFood className="text-4xl h-20 w-20 shadow-sm p-5 rounded-full bg-orange-100 dark:bg-orange-400" />

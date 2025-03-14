@@ -81,60 +81,68 @@ function ListarCategorias() {
         <div className="flex justify-center items-center">
           {categorias.length === 0 && (
 
-            <ThreeDots
-              visible={true}
-              height="80"
-              width="80"
-              color="#bad381"
-              radius="9"
-              ariaLabel="three-dots-loading"
-            />
-          )}
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          <button onClick={buscarTodosProdutos} className="text-xl font-semibold relative border rounded-xl p-4 shadow-3xl flex items-center justify-center bg-[#8daf66] hover:shadow-xl duration-300 cursor-pointer">
-            TODOS OS PRODUTOS
-          </button>
-          <button
-            onClick={() => navigate('/categoria/novo')}
-            className="text-xl font-semibold relative border rounded-xl p-4 shadow-3xl flex items-center justify-center bg-[#8daf66] hover:shadow-xl duration-300 cursor-pointer"
-          >
-            ADICIONAR NOVA CATEGORIA
-          </button>
-          {categorias.map((categoria) => (
-            <CardCategoria
-              key={categoria.id}
-              categoria={categoria}
-              onClick={() => setProdutos(categoria.produto || [])}
-              onDelete={handleDelete}
-            />
-          ))}
-        </div>
-        <div className="rounded-lg p-4 bg-[#fa7777] w-full my-4">
-          <h2 className="text-3xl font-bold text-center text-white mb-6"></h2>
-          <div className="flex justify-center items-center">
-            {loadingProdutos && (
-              <ThreeDots
-                visible={true}
-                height="80"
-                width="80"
-                color="#bad381"
-                radius="9"
-                ariaLabel="three-dots-loading"
-              />
-            )}
-          </div>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {produtos.map((produto) => (
-            <CardProdutos key={produto.id} produto={produto} />
-          ))}
-        </div>
-      </div>
+    <ThreeDots
+      visible={true}
+      height="80"
+      width="80"
+      color="#bad381"
+      radius="9"
+      ariaLabel="three-dots-loading"
+    />
+  )}
+  </div>
+  <div className="flex justify-center gap-4 my-6 w-full">
+    <button
+      onClick={buscarTodosProdutos}
+      className="text-2xl font-semibold border rounded-xl p-4 shadow-3xl flex items-center justify-center bg-[#bad381] hover:shadow-2xl duration-300 cursor-pointer"
+    >
+      TODOS OS PRODUTOS
+    </button>
+    <button
+      onClick={() => navigate('/categoria/novo')}
+      className="text-2xl font-semibold border rounded-xl p-4 shadow-3xl flex items-center justify-center bg-[#bad381] hover:shadow-2xl duration-300 cursor-pointer"
+    >
+      ADICIONAR NOVA CATEGORIA
+    </button>
+  </div>
 
-    </>
+  {/* Grid de Categorias */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    {categorias.map((categoria) => (
+      <CardCategoria
+        key={categoria.id}
+        categoria={categoria}
+        onClick={() => setProdutos(categoria.produto || [])}
+        onDelete={handleDelete}
+      />
+    ))}
+  </div>
+   <div className="rounded-lg p-4 bg-[#fa7777] w-full my-4">
+                    <h2 className="text-3xl font-bold text-center text-white mb-6"></h2>
+                    <div className="flex justify-center items-center">
+                        {loadingProdutos && (
+                            <ThreeDots
+                                visible={true}
+                                height="80"
+                                width="80"
+                                color="#bad381"
+                                radius="9"
+                                ariaLabel="three-dots-loading"
+                            />
+                        )}
+                    </div>
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {produtos.map((produto) => (
+              <CardProdutos key={produto.id} produto={produto} />
+            ))}
+          </div>
+                </div>
+         
+   </>
   )
 }
+
 
 export default ListarCategorias
 

@@ -32,11 +32,8 @@ const Services = () => {
       <div className="py-10">
         <div className="container">
           <div className="text-center mb-20 max-w-[400px] mx-auto">
-            <p className="text-sm bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-verde font-bold ">
-              Nossos Serviços
-            </p>
-            <h1 className="text-3xl font-bold">Serviços</h1>
-            <p className="text-xs text-gray-400">
+            <h1 className="text-red-300 dark:text-lime-300 text-4xl lg:text-5xl font-bold mb-10 pt-12">Serviços</h1>
+            <p className="text-sm text-gray-500 tracking-wide leading-5">
             Nossos serviços foram pensados para oferecer a melhor experiência gastronômica.
             </p>
           </div>
