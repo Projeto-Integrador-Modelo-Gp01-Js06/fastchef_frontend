@@ -15,10 +15,10 @@ function Equipe() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 flex flex-col items-center py-10">
-      <h1 className="text-red-300 dark:text-lime-300 text-4xl lg:text-5xl font-extrabold mb-10 ">
+      <h1 className="text-red-400 dark:text-lime-300 text-4xl lg:text-5xl font-extrabold mb-10">
         CONHEÇA A NOSSA EQUIPE!
       </h1>
-      <p className="text-black dark:text-gray-300 text-xl mb-10 text-center max-w-2xl font-bold">
+      <p className="text-gray-800 dark:text-gray-300 text-xl mb-10 text-center max-w-2xl font-semibold">
         Somos desenvolvedores apaixonados por tecnologia, inovação e qualidade. Juntos, transformamos desafios em soluções eficientes.
       </p>
 
@@ -26,7 +26,7 @@ function Equipe() {
         {membros.map((membro, index) => (
           <div
             key={index}
-            className="bg-red-200 dark:bg-gray-800 shadow-lg rounded-lg p-4 flex flex-col items-center hover:scale-110 transition-transform duration-300 transform group"
+            className="bg-[#f7f7f7] dark:bg-gray-800 shadow-lg rounded-lg p-4 flex flex-col items-center hover:scale-105 transition-transform duration-300 transform group"
           >
             <img
               src={membro.foto}
@@ -34,23 +34,23 @@ function Equipe() {
               className="w-32 h-32 rounded-full mb-4 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
             />
             <h2 className="text-lg font-bold text-black dark:text-white">{membro.nome}</h2>
-            <h2 className="text-lg font-semibold text-black dark:text-gray-300">Dev</h2>
+            <h2 className="text-lg font-semibold text-gray-700 dark:text-gray-400">Dev</h2>
             <div className="flex space-x-4 mt-2">
               <a
                 href={membro.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#8daf66] dark:bg-lime-700 p-2 rounded-full hover:scale-110 hover:bg-lime-300 dark:hover:bg-lime-500 transition-all duration-200"
+                className="bg-[#8daf66] dark:bg-lime-500  p-2 rounded-full hover:scale-110  dark:hover:bg-lime-500 transition-all duration-200"
               >
-                <GithubLogo size={26} weight="bold" className="text-black dark:text-white" />
+                <GithubLogo size={26} weight="bold" className="text-white" />
               </a>
               <a
                 href={membro.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#8daf66] dark:bg-lime-700 p-2 rounded-full hover:scale-110 hover:bg-lime-300 dark:hover:bg-lime-500 transition-all duration-200"
+                className="bg-[#8daf66] dark:bg-lime-500 p-2 rounded-full hover:scale-110  dark:hover:bg-lime-500 transition-all duration-200"
               >
-                <LinkedinLogo size={26} weight="bold" className="text-black dark:text-white" />
+                <LinkedinLogo size={26} weight="bold" className="text-white" />
               </a>
             </div>
           </div>
