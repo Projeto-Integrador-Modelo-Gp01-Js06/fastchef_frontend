@@ -1,43 +1,43 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { FaCartShopping } from "react-icons/fa6";
 import DarkMode from "./DarkMode";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";  
 import { CartContext } from "../../contexts/CartContext";
-import { FaBars, FaTimes } from "react-icons/fa";
 
-// Menu configuration
 const Menu = [
-  { id: 1, name: "Inicio", link: "/#" },
-  { id: 2, name: "Serviços", link: "/services" },
-  { id: 3, name: "Sobre", link: "/Sobre" },
-  { id: 4, name: "Equipe", link: "/equipe" },
+  {
+    id: 1,
+    name: "Inicio",
+    link: "/#",
+  },
+  {
+    id: 2,
+    name: "Serviços",
+    link: "/services",
+  },
+  {
+    id: 3,
+    name: "Sobre",
+    link: "/Sobre",  
+  },
+
+  {
+    id: 4,
+    name: "Equipe",
+    link: "/equipe",  
+  },
 ];
 
+
 const Navbar = () => {
-  const { quantidadeItems } = useContext(CartContext);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
-  const renderMenuLinks = () =>
-    Menu.map((menu) => (  
-      <li key={menu.id}>
-        <Link
-          to={menu.link}
-          className="inline-block py-4 px-4 hover:text-yellow-500"
-          onClick={toggleMenu} // Close menu on click
-        >
-          {menu.name}
-        </Link>
-      </li>
-    ));
+  const { quantidadeItems } = useContext(CartContext)
 
   return (
-    <div className="shadow-md bg-white dark:bg-gray-900 dark:text-white duration-200">
-      <div className="container py-1 sm:py-0">
-        <div className="flex justify-between items-center">
-          {/* Logo */}
-          <div>
+    <>
+      <div className="shadow-md bg-white dark:bg-gray-900 dark:text-white duration-200 py-">
+        <div className="container py-1 sm:py-0">
+          <div className="flex justify-between items-center">
+            <div>
             <Link to="/">
                 <a href="#" className="font-bold text-1xl sm:text-4xl flex gap-0 items-center bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-verde">
                   <img src="https://i.ibb.co/QFpjykTY/FastChef.png" alt="Logo" className="w-[50px]"/>
@@ -75,42 +75,11 @@ const Navbar = () => {
               <div>
                 <DarkMode />
               </div>
-            </Link>
-
-            {/* Mobile Menu Button */}
-            <div className="sm:hidden z-20">
-              <button
-                onClick={toggleMenu}
-                className="bg-gradient-to-r from-red-400 to-red-200 hover:scale-105 duration-200 text-white py-1 px-4 rounded-full flex items-center gap-3 text-xl"
-              >
-                {isMenuOpen ? <FaTimes /> : <FaBars />}
-              </button>
-            </div>
-
-            {/* Dark Mode Toggle */}
-            <div>
-              <DarkMode />
             </div>
           </div>
         </div>
-
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <ul
-            className={`
-              absolute top-14 left-0 w-full 
-              bg-white dark:bg-gray-900 
-              flex flex-col items-center gap-4 py-4 sm:hidden z-10 
-              shadow-md 
-              transition-all duration-300 ease-in-out
-              transform ${isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}
-            `}
-          >
-            {renderMenuLinks()}
-          </ul>
-        )}
       </div>
-    </div>
+    </>
   );
 };
 

@@ -10,14 +10,13 @@ function Cadastro() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [confirmaSenha, setConfirmaSenha] = useState<string>("");
 
-  // A interface 'Usuario' agora exige a propriedade 'admin', então incluímos ela com um valor padrão
   const [usuario, setUsuario] = useState<Usuario>({
     id: 0,
     nome: "",
     usuario: "",
     senha: "",
     foto: "",
-    admin: false, // A propriedade 'admin' agora está sendo inicializada corretamente
+    admin: false,
   });
 
   useEffect(() => {
@@ -41,14 +40,12 @@ function Cadastro() {
   async function cadastrarNovoUsuario(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
-    // Verificar se a senha e a confirmação estão corretas
     if (confirmaSenha === usuario.senha && usuario.senha.length >= 8) {
       setIsLoading(true);
       try {
-        // Passando a propriedade 'admin' (que está como false por padrão) junto aos dados
         await cadastrarUsuario(`/usuarios/cadastrar`, usuario, setUsuario);
         ToastAlerta("Usuário cadastrado com sucesso!", "sucesso");
-        navigate("/login"); // Após cadastro, redireciona para a tela de login
+        navigate("/login");
       } catch (error) {
         ToastAlerta("Erro ao cadastrar o usuário!", "erro");
       }
@@ -61,19 +58,19 @@ function Cadastro() {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-white dark:bg-gray-900 text-black dark:text-white">
-      <div className="w-full max-w-md bg-red-100 dark:bg-gray-800 p-8 rounded-lg shadow-lg">
-        <h2 className="text-3xl font-bold text-center mb-6 text-black dark:text-gray-100">Cadastro</h2>
+    <div className="flex items-center justify-center min-h-screen bg-white dark:bg-gray-900 text-black dark:text-white py-8 px-4">
+      <div className="w-full max-w-md bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
+        <h2 className="text-3xl font-bold text-center mb-6 text-gray-900 dark:text-gray-100">Cadastro</h2>
 
-        <form className="space-y-1" onSubmit={cadastrarNovoUsuario}>
+        <form className="space-y-4" onSubmit={cadastrarNovoUsuario}>
           <div>
-            <label htmlFor="nome" className="block m-15 text-gray-700 dark:text-gray-300 px-1">Nome</label>
+            <label htmlFor="nome" className="block text-gray-700 dark:text-gray-300 px-1">Nome</label>
             <input
               type="text"
               id="nome"
               name="nome"
               placeholder="Nome"
-              className="w-full border-black border rounded-lg py-2 dark:border-gray-600 dark:bg-gray-700 dark:text-white px-1"
+              className="w-full border-2 border-slate-700 rounded-lg py-2 dark:bg-gray-700 dark:text-white px-3"
               value={usuario.nome}
               onChange={atualizarEstado}
             />
@@ -86,7 +83,7 @@ function Cadastro() {
               id="usuario"
               name="usuario"
               placeholder="Email"
-              className="w-full border border-black  rounded-lg py-2 dark:border-gray-600 dark:bg-gray-700 dark:text-white px-1"
+              className="w-full border-2 border-slate-700 rounded-lg py-2 dark:bg-gray-700 dark:text-white px-3"
               value={usuario.usuario}
               onChange={atualizarEstado}
             />
@@ -99,7 +96,7 @@ function Cadastro() {
               id="foto"
               name="foto"
               placeholder="Foto"
-              className="w-full border border-black  rounded-lg py-2 px-1 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
+              className="w-full border-2 border-slate-700 rounded-lg py-2 dark:bg-gray-700 dark:text-white px-3"
               value={usuario.foto}
               onChange={atualizarEstado}
             />
@@ -112,20 +109,20 @@ function Cadastro() {
               id="senha"
               name="senha"
               placeholder="Senha"
-              className="w-full border px-1 border-black  rounded-lg py-2 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
+              className="w-full border-2 border-slate-700 rounded-lg py-2 dark:bg-gray-700 dark:text-white px-3"
               value={usuario.senha}
               onChange={atualizarEstado}
             />
           </div>
 
           <div>
-            <label htmlFor="confirmarSenha" className="block text-gray-700  dark:text-gray-300 px-1">Confirmar Senha</label>
+            <label htmlFor="confirmarSenha" className="block text-gray-700 dark:text-gray-300 px-1">Confirmar Senha</label>
             <input
               type="password"
               id="confirmarSenha"
               name="confirmarSenha"
-              placeholder="Confirmar a senha"
-              className="w-full border border-black  rounded-lg py-2 px-1 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
+              placeholder="Confirmar senha"
+              className="w-full border-2 border-slate-700 rounded-lg py-2 dark:bg-gray-700 dark:text-white px-3"
               value={confirmaSenha}
               onChange={handleConfirmaSenha}
             />
@@ -134,10 +131,10 @@ function Cadastro() {
           <div className="flex justify-between mt-4">
             <button
               type="submit"
-              className="bg-[#8daf66] hover:bg-[#44b063] px-6 py-2 rounded-lg text-black w-1/2 mr-2 m"
+              className="bg-[#8daf66] hover:bg-[#44b063] px-6 py-2 rounded-lg text-white w-1/2 mr-2"
             >
               {isLoading ? (
-                <RotatingLines strokeColor="black" width="24" visible={true} />
+                <RotatingLines strokeColor="white" width="24" visible={true} />
               ) : (
                 "Cadastrar"
               )}
@@ -146,13 +143,13 @@ function Cadastro() {
               type="button"
               className="bg-red-300 hover:bg-red-400 px-6 py-2 rounded-lg text-black w-1/2 ml-2"
             >
-              <Link to="/">
-                Voltar tela inicial</Link>
+              <Link to="/">Voltar tela inicial</Link>
             </button>
           </div>
-          <p className="text-center mt-4">
-            Já tem uma conta? Faça o {" "}
-            <Link to="/login" className="font-bold text-[#44b063]  hover:underline">
+
+          <p className="text-center mt-4 text-gray-700 dark:text-gray-300">
+            Já tem uma conta? Faça o{" "}
+            <Link to="/login" className="font-bold text-[#44b063] hover:underline">
               Login
             </Link>
           </p>

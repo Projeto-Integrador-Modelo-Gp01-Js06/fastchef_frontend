@@ -50,39 +50,39 @@ function Login() {
       </div>
 
       <form
-        className="w-full lg:w-1/2 p-1 my-10 mx-auto max-w-md"
+        className="w-full lg:w-2/3 p-9 my-10 mx-auto max-w-md bg-white dark:bg-gray-800 rounded-lg shadow-lg"
         onSubmit={login}
       >
-        <h2 className="text-2xl font-bold text-center mb-6">Faça seu Login</h2>
+        <h2 className="text-2xl font-bold text-center mb-6 text-gray-900 dark:text-white">Faça seu Login</h2>
 
         <div className="flex flex-col w-full">
-          <label htmlFor="usuario">Usuário (E-mail)</label>
+          <label htmlFor="usuario" className="text-gray-700 dark:text-gray-300">Usuário (E-mail)</label>
           <input
             type="text"
             id="usuario"
             name="usuario"
             placeholder="Usuário"
-            className="border-2 border-slate-700 rounded p-2 focus:ring-2 focus:ring-[#fa7777]"
+            className="border-2 border-slate-700 rounded p-2 focus:ring-2 focus:ring-[#fa7777] bg-white dark:bg-gray-700 text-black dark:text-white"
             value={usuarioLogin.usuario}
             onChange={atualizarEstado}
           />
         </div>
 
         <div className="relative flex flex-col w-full mt-4">
-          <label htmlFor="senha">Senha</label>
+          <label htmlFor="senha" className="text-gray-700 dark:text-gray-300">Senha</label>
           <input
             type={showPassword ? "text" : "password"}
             id="senha"
             name="senha"
             placeholder="Senha"
-            className="border-2 border-slate-700 rounded p-2 focus:ring-2 focus:ring-[#fa7777]"
+            className="border-2 border-slate-700 rounded p-2 focus:ring-2 focus:ring-[#fa7777] bg-white dark:bg-gray-700 text-black dark:text-white"
             value={usuarioLogin.senha}
             onChange={atualizarEstado}
           />
           <button
             type="button"
             aria-label={showPassword ? "Esconder senha" : "Mostrar senha"}
-            className="top-9 right-2 absolute text-slate-700"
+            className="top-9 right-2 absolute text-slate-700 dark:text-slate-300"
             onClick={() => setShowPassword(!showPassword)}
           >
             {showPassword ? <EyeSlash size={20} /> : <Eye size={20} />}
@@ -110,9 +110,9 @@ function Login() {
 
         <hr className="border-slate-800 w-full" />
 
-        <p className="text-center mt-4">
+        <p className="text-center mt-4 text-gray-700 dark:text-gray-300">
           Ainda não tem uma conta?{" "}
-          <Link to="/cadastro" className="text-[#44b063]  hover:underline">
+          <Link to="/cadastro" className="text-[#44b063] hover:underline">
             Cadastre-se
           </Link>
         </p>
