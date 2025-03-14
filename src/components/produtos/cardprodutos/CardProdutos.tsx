@@ -76,7 +76,7 @@ function CardProdutos({ produto }: CardProdutoProps) {
           alt={produto.nome}
         />
 
-        <div className="p-4">
+        <div className="pl-4 pr-4">
           <div className="min-h-12 flex items-center justify-center">
             <p className="text-sm text-center uppercase">{produto.nome}</p>
           </div>
@@ -89,12 +89,16 @@ function CardProdutos({ produto }: CardProdutoProps) {
             <p className="text-sm">Gordura Saturada: {produto.gorduraSaturada} g</p>
             <p className="text-sm">Açúcar: {produto.acucar} g</p>
             <p className="text-sm">Sódio: {produto.sodio} g</p>
-          </div>          
-          {["A", "B"].includes(produto.nutriScore) && (
-            <p className="text-lg font-bold text-green-500">
-              NutriScore: SAUDÁVEL
-            </p>
-          )}
+          </div>
+          <p
+            className={`text-lg font-bold ${
+              ["A", "B"].includes(produto.nutriScore) ? "text-green-500" :
+              produto.nutriScore === "C" ? "text-yellow-500" : "text-red-500"
+            }`}
+            style={{ minHeight: "24px" }} // Tamanho fixo (espaçamento igual)
+          >
+            {["A", "B"].includes(produto.nutriScore) ? "NutriScore: SAUDÁVEL" : ""}
+          </p>
           
           {produto.categoria ? (
             <p className="text-base italic text-center">
