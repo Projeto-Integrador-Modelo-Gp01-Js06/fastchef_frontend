@@ -26,7 +26,7 @@ const Navbar = () => {
       <li key={menu.id}>
         <Link
           to={menu.link}
-          className="inline-block py-4 px-4 hover:text-yellow-500"
+          className="inline-block py-4 px-4 hover:text-[#44b063]"
           onClick={toggleMenu} // Close menu on click
         >
           {menu.name}
@@ -53,6 +53,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div>
+            
             <Link to="/">
               <a
                 href="#"
@@ -99,7 +100,23 @@ const Navbar = () => {
                 {isMenuOpen ? <FaTimes /> : <FaBars />}
               </button>
             </div>
+            <Link to="/login">
+ 
+ <img src= "https://ik.imagekit.io/c2hajdacu/FastChef/user%20(1).png?updatedAt=1741357664304" className="w-10 h-10 rounded-full mb-4 p-1 m-5 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110 bg-red-300"></img>
 
+ </Link>
+
+
+ {isAuthenticated && (
+
+
+   <Link to='' onClick={logout} className='mr-1 -m-5 hover:underline'>
+
+
+     Sair
+
+
+   </Link>)}
             {/* Dark Mode Toggle */}
             <div>
               <DarkMode />

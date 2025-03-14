@@ -50,13 +50,13 @@ function CardCart({ item }: CardProdutosProps) {
                 </div>
             </div>
             <div className="flex flex-wrap ">
-                <button className='w-1/2 text-slate-100 bg-blue-500 hover:bg-blue-700 
+                <button className='w-1/2 text-slate-100 bg-[#8daf66] hover:bg-[#44b063] 
                                    flex items-center justify-center py-2'
                     onClick={() => adicionarItem(item.id)}>
                     <Plus size={32} />
                 </button>
                 <button
-                    className="w-1/2 text-slate-100 bg-red-500 hover:bg-red-700 
+                    className="w-1/2 text-slate-100 bg-red-400 hover:bg-red-500 
                                    flex items-center justify-center py-2"
                     onClick={() => handleRemoverItem(item.id)} // Ação ao clicar no botão de remover
                 >
