@@ -3,10 +3,6 @@ import Produto from '../../../models/Produto';
 import { DNA } from 'react-loader-spinner';
 import CardProdutos from '../cardprodutos/CardProdutos';
 import { listar } from '../../../services/Service';
-<<<<<<< HEAD
-
-=======
->>>>>>> Dupla-3
 
 function ListarProdutos() {
   const [produtos, setProdutos] = useState<Produto[]>([]);

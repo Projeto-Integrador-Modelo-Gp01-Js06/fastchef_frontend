@@ -12,6 +12,7 @@ interface CardCategoriasProps {
 
 function CardCategoria({ categoria, onClick, onDelete }: CardCategoriasProps) {
   const { usuario } = useContext(AuthContext);
+  const isAuthenticated = usuario.token !== ""; // Verifica se há token (usuário logado)
   const navigate = useNavigate();
   
   const handleDelete = (e: React.MouseEvent) => {
@@ -31,7 +32,7 @@ function CardCategoria({ categoria, onClick, onDelete }: CardCategoriasProps) {
     >
       <p className='text-2xl font-semibold text-gray-800'>{categoria.nome}</p>
       
-      {usuario && usuario.token && (
+      {isAuthenticated && (usuario.id === 20 || usuario.usuario === 'admin@admin.com') && (
         <div className="absolute right-4 top-1/2 -translate-y-1/2 flex">
           <button onClick={handleEdit}>
             <Pencil size={24} className="mr-1 hover:fill-teal-700" />

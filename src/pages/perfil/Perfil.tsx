@@ -34,10 +34,10 @@ function Perfil() {
                 className="relative mt-[-6rem] h-72 flex flex-col 
                     bg-red-500 text-white text-2xl items-center justify-center rounded-b-3xl"
             >
-                <div className="relative ml-36">
+                <div className="relative mt-14 cursor-pointer duration-300 hover:scale-110">
                     <ModalPerfil />
                 </div>
-                <div className='mt-4'>
+                <div className='flex flex-col mt-4 items-center'>
                     <p>Nome: {usuario.nome} </p>
                     <p>Email: {usuario.usuario}</p>
                 </div>
