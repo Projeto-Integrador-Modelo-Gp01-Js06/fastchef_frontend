@@ -57,11 +57,11 @@ const Home = () => {
               </span>{" "}
               em qualquer cidade
             </h1>
-            <p className="text-sm dark:text-black dark:bg-white bg-verde rounded-md border-1 px-4">
+            <p className="text-sx dark:text-black dark:bg-white bg-verde rounded-md border-1 px-4">
               Do petisco ao prato principal, tudo num clique!
             </p>
-            <div className="flex flex-wrap gap-4 justify-center sm:justify-start ml-80">
-              <div>
+            <div className="flex flex-wrap gap-4 justify-center sm:justify-start ">
+              <div className="flex justify-center">
                 <button
                   onClick={() => navigate("/login")}
                   className="bg-gradient-to-r from-red-400 to-red-300 hover:scale-105 duration-200 text-black py-2 px-4 rounded-full mt-2 font-bold"

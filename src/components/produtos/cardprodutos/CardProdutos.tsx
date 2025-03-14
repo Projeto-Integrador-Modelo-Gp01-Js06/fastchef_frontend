@@ -50,7 +50,7 @@ function CardProdutos({ produto }: CardProdutoProps) {
         
       </div>
 
-      <div className="flex flex-col justify-center py-2">
+      <div className="flex flex-col justify-center py-2 dark:text-black">
         <img
           src={produto.foto}
           className="mt-1 h-44 w-auto m-2 object-cover rounded-lg"
