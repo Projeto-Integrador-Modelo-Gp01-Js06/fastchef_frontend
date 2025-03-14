@@ -25,6 +25,7 @@ import DeletarProduto from "./components/produtos/deletarproduto/DeletarProduto"
 import FormProduto from "./components/produtos/formproduto/FormProduto";
 import Navbar from "./components/Navbar/Navbar";
 import Equipe from "./pages/equipe/Equipe";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 const App = () => {
   useEffect(() => {
@@ -42,6 +43,7 @@ const App = () => {
       <AuthProvider>
         <ToastContainer />
         <BrowserRouter>
+        <ScrollToTop/>
           <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
             <CartProvider>
               <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
@@ -65,6 +67,7 @@ const App = () => {
                       </>
                     }
                   />
+                  
 
                   {/* Rota para a página de serviços */}
                   <Route path="/services" element={<Servicos />} />
