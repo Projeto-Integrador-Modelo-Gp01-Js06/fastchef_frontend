@@ -1,16 +1,28 @@
 import React, { useEffect, useState, useRef } from "react";
 
-import Salada from "../assets/salada2.png";
-import Peixe from "../assets/peixe.png";
-import PetFood from "../assets/racao.png";
-import Massas from "../assets/pizza.png"
+
+import Marmita from "../assets/marmita.png";
+import Massas from "../assets/massas.png"
+import Japonesa from "../assets/japonesa.png"
+import Pizza from "../assets/pizza.png"
+import Salgados from "../assets/salgados.png"
+import Sorvete from "../assets/sorvete.png"
+import Açai from "../assets/acai.png"
+import Doces from "../assets/doces.png"
+import Lanches from "../assets/lanches.png"
+
 
 
 const categories = [
-  { id: 1, name: "Massas", img: Massas },
-  { id: 2, name: "Salada", img: Salada },
-  { id: 3, name: "Peixe", img: Peixe },
-  { id: 4, name: "Alimento de pet", img: PetFood },
+  { id: 1, name: "Massas", img: Massas }, 
+  { id: 2, name: "Marmita", img: Marmita },
+  { id: 3, name: "Japonesa", img: Japonesa },
+  { id: 4, name: "Pizza", img: Pizza },
+  { id: 5, name: "Salgados", img: Salgados },
+  { id: 6, name: "Sorvete", img: Sorvete },
+  { id: 7, name: "Açai", img: Açai },
+  { id: 8, name: "Doces", img: Doces},
+  { id: 9, name: "Lanches", img: Lanches},
 ];
 
 const Categories = () => {
@@ -59,7 +71,7 @@ const Categories = () => {
             {[...categories, ...categories].map((category, index) => (
               <div
                 key={index}
-                className="bg-red-200 p-5 rounded-lg shadow-2xl flex flex-col items-center min-w-[150px] h-[250px] transition-transform duration-300 hover:scale-110"
+                className="bg-red-200 p-5 rounded-lg shadow-2xl flex flex-col items-center min-w-[150px] h-[250px] transition-transform duration-500 hover:scale-110"
               >
                 <img
                   src={category.img}
@@ -86,7 +98,7 @@ const Categories = () => {
           }
           .carousel-track {
             display: flex;
-            animation: scroll 8s linear infinite alternate;
+            animation: scroll 15s linear infinite alternate;
             width: max-content;
           }
         `}

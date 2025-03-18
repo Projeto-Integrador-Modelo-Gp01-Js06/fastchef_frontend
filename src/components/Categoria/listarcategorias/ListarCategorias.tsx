@@ -74,7 +74,7 @@ function ListarCategorias() {
   return (
     <>
       <div className="flex justify-end"></div>
-      <div className="rounded-lg p-4 bg-[#fa7777] w-full my-4">
+      <div className="rounded-lg p-4 w-full my-4">
         <h2 className="text-3xl font-bold text-center text-white mb-6">
           CATEGORIAS
         </h2>
@@ -90,10 +90,10 @@ function ListarCategorias() {
             />
           )}
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="flex flex-wrap gap-3">
           <button
             onClick={buscarTodosProdutos}
-            className="text-2xl font-semibold relative border rounded-xl p-4 shadow-3xl flex items-center justify-center bg-[#bad381] hover:shadow-2xl duration-300 cursor-pointer"
+            className="text-xl font-semibold relative border rounded-xl p-1 shadow-3xl flex items-center justify-center bg-verde hover:shadow-xl duration-300 cursor-pointer  w-60 h-9 transform hover:scale-105"
           >
             TODOS OS PRODUTOS
           </button>
@@ -117,7 +117,7 @@ function ListarCategorias() {
             />
           ))}
         </div>
-        <div className="rounded-lg p-4 bg-[#fa7777] w-full my-4">
+        <div className="rounded-lg p-4  w-full my-4">
           <h2 className="text-3xl font-bold text-center text-white mb-6"></h2>
           <div className="flex justify-center items-center">
             {loadingProdutos && (

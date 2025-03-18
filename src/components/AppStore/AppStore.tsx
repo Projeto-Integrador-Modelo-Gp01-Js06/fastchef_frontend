@@ -16,19 +16,19 @@ const AppStore = () => {
               <h1 className="text-2xl text-center sm:text-left sm:text-4xl font-semibold text-gray-700 dark:text-gray-400">
                 FastChef também está disponivel para Android e IOS
               </h1>
-              <div className="flex flex-wrap justify-center sm:justify-start items-center">
+              <div className="flex flex-wrap justify-center sm:justify-start items-center gap-4">
                 <a href="#">
                   <img
                     src={PlayStoreImg}
                     alt="Play store"
-                    className="max-w-[150px] sm:max-w-[120px] md:max-w-[200px]"
+                    className="max-w-[140px] sm:max-w-[140px] md:max-w-[154px] w-full transition-transform transform hover:scale-110"
                   />
                 </a>
                 <a href="#">
                   <img
                     src={AppStoreImg}
                     alt="App store"
-                    className="max-w-[150px] sm:max-w-[120px] md:max-w-[200px]"
+                    className="max-w-[180px] sm:max-w-[180px] md:max-w-[182px] w-full transition-transform transform hover:scale-110"
                   />
                 </a>
               </div>
