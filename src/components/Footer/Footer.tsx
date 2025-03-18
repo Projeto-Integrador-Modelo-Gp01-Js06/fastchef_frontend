@@ -12,7 +12,7 @@ const Footer = () => {
   const data = new Date().getFullYear()
 
   return (
-    <div className="bg-green-50 dark:bg-gray-950">
+    <div className="bg-green-50 dark:bg-gray-900">
       <section className="max-w-[1200px] mx-auto">
         <div className=" grid md:grid-cols-3 py-5">
           <div className=" py-8 px-4 ">

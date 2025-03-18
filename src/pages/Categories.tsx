@@ -53,7 +53,7 @@ const Categories = () => {
   return (
     <div
       ref={sectionRef}
-      className={`w-full bg-gray-100 dark:bg-gray-900 py-20 flex flex-col items-center transition-all duration-1000 ${
+      className={`w-full bg-gray-100 dark:bg-gray-950 py-20 flex flex-col items-center transition-all duration-1000 ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
       }`}
     >
@@ -78,7 +78,7 @@ const Categories = () => {
                   alt={category.name}
                   className="w-24 h-24 object-cover"
                 />
-                <p className="mt-3 text-xl font-semibold ">{category.name}</p>
+                <p className="mt-3 text-xl font-semibold dark:text-black">{category.name}</p>
               </div>
             ))}
           </div>

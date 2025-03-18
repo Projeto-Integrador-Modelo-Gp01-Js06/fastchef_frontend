@@ -37,7 +37,7 @@ const Testimonial = () => {
   };
   return (
     <>
-      <div data-aos="fade-up" data-aos-duration="300" className="py-10">
+      <div data-aos="fade-up" data-aos-duration="300" className="py-10 dark:bg-gray-950">
         <div className="container">
           <div className="text-center mb-20 max-w-[400px] mx-auto">
             <p className="text-sm bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-verde font-bold">

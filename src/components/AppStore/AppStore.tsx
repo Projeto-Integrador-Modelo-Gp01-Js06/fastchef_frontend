@@ -5,7 +5,7 @@ import Gif from "../../assets/mobile_bike.gif";
 const AppStore = () => {
   return (
     <>
-      <div className="bg-gray-100 dark:bg-gray-800 py-14">
+      <div className="bg-gray-100 dark:bg-gray-900 py-14">
         <div className="container">
           <div className="grid sm:grid-cols-2 grid-cols-1 items-center gap-4">
             <div
@@ -28,7 +28,7 @@ const AppStore = () => {
                   <img
                     src={AppStoreImg}
                     alt="App store"
-                    className="max-w-[180px] sm:max-w-[180px] md:max-w-[182px] w-full transition-transform transform hover:scale-110"
+                    className="max-w-[180px] sm:max-w-[180px] md:max-w-[245px] w-full transition-transform transform hover:scale-110 "
                   />
                 </a>
               </div>
