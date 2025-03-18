@@ -19,7 +19,7 @@ function Perfil() {
     }, [usuario.token])
 
     return (
-        <div className='container mx-auto m-4 rounded-2xl overflow-hidden'>
+        <div className='container mx-auto  rounded-2xl overflow-hidden pt-20'>
 
             <img
                 className='w-full h-72 object-cover border-b-8 border-white rounded-t-3xl'

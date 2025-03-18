@@ -43,9 +43,6 @@ function CardProdutos({ produto }: CardProdutoProps) {
         {/* Mostrar ícones de cadastro, edição e exclusão apenas se for o Usuario Admin mencionado abaixo */}
         {isAuthenticated && (usuario.id === 20 || usuario.usuario === 'admin@admin.com') && (
           <>
-            <Link to={`/produto/produto`}>
-              <Plus size={24} className="mr-1 hover:fill-green-700" />
-            </Link>
             <Link to={`/produto/editarproduto/${produto.id}`}>
               <Pencil size={24} className="mr-1 hover:fill-teal-700" />
             </Link>
@@ -84,8 +81,8 @@ function CardProdutos({ produto }: CardProdutoProps) {
         />
 
         <div className="pl-4 pr-4">
-          <div className="min-h-12 flex items-center justify-center">
-            <p className="text-sm text-center uppercase">{produto.nome}</p>
+          <div className="min-h-12 flex items-center justify-center ">
+            <p className="text-sm text-center uppercase font-semibold">{produto.nome}</p>
           </div>
           <h3 className="text-xl text-center font-bold uppercase">
             {formatarMoeda(produto.preco)}

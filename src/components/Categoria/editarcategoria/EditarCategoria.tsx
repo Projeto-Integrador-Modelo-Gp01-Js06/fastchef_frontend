@@ -110,7 +110,7 @@ function EditarCategoria() {
   }
 
   function retornar() {
-    navigate("/categoria");
+    navigate("/cardapio");
   }
 
   return (
@@ -128,7 +128,7 @@ function EditarCategoria() {
             id="nome"
             name="nome"
             placeholder="Nome"
-            className="border-2 border-slate-300 rounded-md p-2"
+            className="border-2 border-slate-300 rounded-md p-2 dark:text-dark"
             value={categoria.nome}
             onChange={atualizarEstado}
             required

@@ -76,7 +76,7 @@ function CadastrarCategoria() {
             id="nome"
             name="nome"
             placeholder="Nome"
-            className="border-2 border-slate-300 rounded-md p-2"
+            className="border-2 border-slate-300 rounded-md p-2 dark:text-black"
             value={categoria.nome}
             onChange={atualizarEstado}
             required

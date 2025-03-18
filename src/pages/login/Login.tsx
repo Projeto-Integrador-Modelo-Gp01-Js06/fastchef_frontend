@@ -62,7 +62,7 @@ function Login() {
             id="usuario"
             name="usuario"
             placeholder="Usuário"
-            className="border-2 border-slate-700 rounded p-2 focus:ring-2 focus:ring-[#fa7777]"
+            className="border-2 border-slate-700 rounded p-2 focus:ring-2 focus:ring-[#fa7777] dark:text-black"
             value={usuarioLogin.usuario}
             onChange={atualizarEstado}
           />
@@ -75,7 +75,7 @@ function Login() {
             id="senha"
             name="senha"
             placeholder="Senha"
-            className="border-2 border-slate-700 rounded p-2 focus:ring-2 focus:ring-[#fa7777]"
+            className="border-2 border-slate-700 rounded p-2 focus:ring-2 focus:ring-[#fa7777] dark:text-black"
             value={usuarioLogin.senha}
             onChange={atualizarEstado}
           />

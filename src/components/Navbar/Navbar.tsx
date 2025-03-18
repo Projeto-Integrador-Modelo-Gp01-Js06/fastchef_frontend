@@ -14,6 +14,7 @@ const Menu = [
   { id: 3, name: "Sobre", link: "/Sobre" },
   { id: 4, name: "Equipe", link: "/equipe" },
   { id: 5, name: "Perfil", link: "/login" },
+
 ];
 
 const Navbar = () => {
@@ -107,11 +108,7 @@ const Navbar = () => {
               />
             </Link>
 
-            {isAuthenticated && (
-              <Link to="" onClick={logout} className="mr-1 -m-5 hover:underline">
-                Sair
-              </Link>
-            )}
+            
             {/* Dark Mode Toggle */}
             <div>
               <DarkMode />
@@ -132,6 +129,17 @@ const Navbar = () => {
             `}
           >
             {renderMenuLinks()}
+            {isAuthenticated && (
+      <li>
+        <Link
+          to=""
+          onClick={logout}
+          className="inline-block py-4 px-4 hover:text-[#44b063]"
+        >
+          Sair
+        </Link>
+      </li>
+    )}
           </ul>
         )}
       </div>

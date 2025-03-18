@@ -1,11 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
-import CardCategoria from "../cardcategoria/CardCategoria";
-import { useNavigate, useParams } from "react-router-dom";
-import Categoria from "../../../models/Categoria";
+import { useNavigate } from "react-router-dom";
 import { ThreeDots } from "react-loader-spinner";
+
+import CardCategoria from "../cardcategoria/CardCategoria";
+import CardProdutos from "../../produtos/cardprodutos/CardProdutos";
+import Categoria from "../../../models/Categoria";
 import Produto from "../../../models/Produto";
 import { deletar, listar } from "../../../services/Service";
-import CardProdutos from "../../produtos/cardprodutos/CardProdutos";
 import { ToastAlerta } from "../../../utils/ToastAlerta";
 import AuthContext from "../../../contexts/AuthContext";
 
@@ -15,20 +16,16 @@ function ListarCategorias() {
   const [produtos, setProdutos] = useState<Produto[]>([]);
   const [loadingProdutos, setLoadingProdutos] = useState(false);
   const { usuario, handleLogout } = useContext(AuthContext);
-  const isAuthenticated = usuario.token !== ""; // Verifica se há token (usuário logado)
+  const isAuthenticated = usuario.token !== "";
   const token = usuario.token;
 
   async function buscarCategorias() {
     try {
-      console.log("Buscando categorias...");
       const categoriasResponse = await listar("/categoria", setCategorias);
-      console.log("Categorias encontradas:", categoriasResponse);
-      // Extrair produtos das categorias
       const todosProdutos = categoriasResponse.flatMap(
         (categoria: Categoria) => categoria.produto
       );
       setProdutos(todosProdutos);
-      console.log("Produtos encontrados:", todosProdutos);
     } catch (err) {
       console.error("Erro ao buscar categorias:", err);
     }
@@ -37,9 +34,7 @@ function ListarCategorias() {
   async function buscarTodosProdutos() {
     try {
       setLoadingProdutos(true);
-      console.log("Buscando todos os produtos...");
-      const todosProdutos = await listar("/produto", setProdutos);
-      console.log("Todos os produtos encontrados:", todosProdutos);
+      await listar("/produto", setProdutos);
     } catch (err) {
       console.error("Erro ao buscar todos os produtos:", err);
     } finally {
@@ -54,9 +49,7 @@ function ListarCategorias() {
   const handleDelete = async (id: number) => {
     try {
       await deletar(`/categoria/${id}`, {
-        headers: {
-          Authorization: token,
-        },
+        headers: { Authorization: token },
       });
       setCategorias((prevCategorias) =>
         prevCategorias.filter((cat) => cat.id !== id)
@@ -72,14 +65,53 @@ function ListarCategorias() {
   };
 
   return (
-    <>
-      <div className="flex justify-end"></div>
+    <div className="rounded-lg p-4 w-full my-4">
+      <h2 className="text-3xl font-bold text-center text-white mb-6">CATEGORIAS</h2>
+
+      <div className="flex gap-4 mb-4 justify-center">
+        <button
+          onClick={buscarTodosProdutos}
+          className="text-xl font-semibold border rounded-xl p-1 shadow-3xl flex items-center justify-center bg-verde hover:shadow-xl duration-300 cursor-pointer w-60 h-9 transform hover:scale-105"
+        >
+          TODOS OS PRODUTOS
+        </button>
+
+        {isAuthenticated &&
+          (usuario.id === 20 || usuario.usuario === "admin@admin.com") && (
+            <>
+              <button
+                onClick={() => navigate("/categoria/novo")}
+                className="text-sm font-semibold border rounded-xl p-1 shadow-3xl flex items-center justify-center bg-verde hover:shadow-xl duration-300 cursor-pointer w-60 h-10 transform hover:scale-105"
+              >
+                ADICIONAR NOVA CATEGORIA
+              </button>
+
+              <button
+                onClick={() => navigate("/produto/produto")}
+                className="text-sm font-semibold border rounded-xl p-1 shadow-3xl flex items-center justify-center bg-verde hover:shadow-xl duration-300 cursor-pointer w-60 h-10 transform hover:scale-105"
+              >
+                ADICIONAR NOVO PRODUTO
+              </button>
+            </>
+          )}
+      </div>
+
+      {/* Exibição de Categorias */}
+      <div className="flex flex-wrap gap-3 justify-center">
+        {categorias.map((categoria) => (
+          <CardCategoria
+            key={categoria.id}
+            categoria={categoria}
+            onClick={() => setProdutos(categoria.produto || [])}
+            onDelete={handleDelete}
+          />
+        ))}
+      </div>
+
+      {/* Exibição de Produtos */}
       <div className="rounded-lg p-4 w-full my-4">
-        <h2 className="text-3xl font-bold text-center text-white mb-6">
-          CATEGORIAS
-        </h2>
-        <div className="flex justify-center items-center">
-          {categorias.length === 0 && (
+        {loadingProdutos && (
+          <div className="flex justify-center items-center">
             <ThreeDots
               visible={true}
               height="80"
@@ -88,57 +120,16 @@ function ListarCategorias() {
               radius="9"
               ariaLabel="three-dots-loading"
             />
-          )}
-        </div>
-        <div className="flex flex-wrap gap-3">
-          <button
-            onClick={buscarTodosProdutos}
-            className="text-xl font-semibold relative border rounded-xl p-1 shadow-3xl flex items-center justify-center bg-verde hover:shadow-xl duration-300 cursor-pointer  w-60 h-9 transform hover:scale-105"
-          >
-            TODOS OS PRODUTOS
-          </button>
-          <div>
-            {isAuthenticated &&
-              (usuario.id === 20 || usuario.usuario === 'admin@admin.com') && (
-                <button
-                  onClick={() => navigate("/categoria/novo")}
-                  className="text-xl font-semibold relative border rounded-xl p-4 shadow-3xl flex items-center justify-center bg-[#8daf66] hover:shadow-xl duration-300 cursor-pointer"
-                >
-                  ADICIONAR NOVA CATEGORIA
-                </button>
-              )}
           </div>
-          {categorias.map((categoria) => (
-            <CardCategoria
-              key={categoria.id}
-              categoria={categoria}
-              onClick={() => setProdutos(categoria.produto || [])}
-              onDelete={handleDelete}
-            />
-          ))}
-        </div>
-        <div className="rounded-lg p-4  w-full my-4">
-          <h2 className="text-3xl font-bold text-center text-white mb-6"></h2>
-          <div className="flex justify-center items-center">
-            {loadingProdutos && (
-              <ThreeDots
-                visible={true}
-                height="80"
-                width="80"
-                color="#bad381"
-                radius="9"
-                ariaLabel="three-dots-loading"
-              />
-            )}
-          </div>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {produtos.map((produto) => (
-            <CardProdutos key={produto.id} produto={produto} />
-          ))}
-        </div>
+        )}
       </div>
-    </>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {produtos.map((produto) => (
+          <CardProdutos key={produto.id} produto={produto} />
+        ))}
+      </div>
+    </div>
   );
 }
 

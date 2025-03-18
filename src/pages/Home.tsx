@@ -60,7 +60,7 @@ const Home = () => {
             <p className="text-sx dark:text-black dark:bg-white bg-verde rounded-md border-1 px-4">
               Do petisco ao prato principal, tudo num clique!
             </p>
-            <div className="flex flex-wrap gap-4 justify-center sm:justify-start ">
+            <div className="flex flex-wrap gap-4 justify-center ml-44 ">
               <div className="flex justify-center">
                 <button
                   onClick={() => navigate("/login")}
