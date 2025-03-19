@@ -107,7 +107,11 @@ const Navbar = () => {
                 className="hidden sm:block w-8 h-8 rounded-full mb-4 p-1 m-5 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110 bg-red-300" // Adjusted size
               />
             </Link>
-
+            {isAuthenticated && (
+              <Link to="" onClick={logout}     className="hidden sm:inline mr-1 -m-5 hover:underline">
+                Sair
+              </Link>
+            )}
             
             {/* Dark Mode Toggle */}
             <div>

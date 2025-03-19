@@ -26,6 +26,7 @@ import FormProduto from "./components/produtos/formproduto/FormProduto";
 import Navbar from "./components/Navbar/Navbar";
 import Equipe from "./pages/equipe/Equipe";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import useHealthCheck from "./hooks/useHealthCheck";
 
 const App = () => {
   useEffect(() => {
@@ -37,6 +38,9 @@ const App = () => {
     });
     AOS.refresh();
   }, []);
+
+  useHealthCheck()
+
 
   return (
     <>
