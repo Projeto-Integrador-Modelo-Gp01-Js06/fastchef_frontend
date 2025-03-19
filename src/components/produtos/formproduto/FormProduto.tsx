@@ -118,7 +118,7 @@ function FormProduto() {
   }
 
   function retornar() {
-    navigate("/produto");
+    navigate("/cardapio");
   }
 
   async function gerarNovaProduto(e: ChangeEvent<HTMLFormElement>) {
