@@ -47,16 +47,7 @@ Veja como o **FastChef** se apresenta:
 - **Avaliações**: Mostra o feedback de usuários sobre o serviço de entrega e qualidade dos alimentos.
 - **Carrinho de Compras**: Um botão para acessar o carrinho e concluir a compra de pratos.
 
-
-## 4. Minhas Redes Sociais 📱
-
-- **Instagram**: [@KarolBoav](https://www.instagram.com/karolboav)
-- **GitHuB**: [@Caaarolb](https://github.com/Caaarolb)
-- **LinkedIn**: [Jeisa Boaventura](https://www.linkedin.com/in/-caroline-boaventura/)
-
-
-
-## 5. Contribuindo 🤝
+## 4. Contribuindo 🤝
 
 Se você quiser contribuir para o projeto, fique à vontade para realizar um **fork** e enviar um **pull request**. Antes de começar, por favor, siga os passos abaixo:
 
@@ -69,9 +60,7 @@ Se você quiser contribuir para o projeto, fique à vontade para realizar um **f
 
 Sua contribuição é muito bem-vinda! 🚀
 
-
-
-## 6. Licença 📝
+## 5. Licença 📝
 
 Este projeto está licenciado sob a **Licença MIT** - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
